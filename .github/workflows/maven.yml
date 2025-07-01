@@ -19,7 +19,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Copy Jar file    
-      run: mkdir staging && cp target/*.jar staging
+      run: mv target/*.jar app.jar
     - uses: actions/upload-artifact@v4
       with:
         name: github_actions_course
