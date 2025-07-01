@@ -1,10 +1,8 @@
-FROM eclipse-temurin:21-jdk-alpine
-
-RUN mkdir /app
-
-COPY app.jar /app/app.jar
-
-WORKDIR /app
+FROM openjdk:21-jdk-alpine
 
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+
+COPY ./target/demo_github_actions-0.0.1-SNAPSHOT.jar /usr/app/
+WORKDIR /usr/app
+
+ENTRYPOINT ["java", "-jar", "demo_github_actions-0.0.1-SNAPSHOT.jar"]
