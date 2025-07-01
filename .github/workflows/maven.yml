@@ -53,4 +53,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: thearaseng/dockerized-spring-boot-app:${{ env.DATE }}    
+          tags: denysbiliaiev/dockerized-spring-boot-app:${{ env.DATE }}    
